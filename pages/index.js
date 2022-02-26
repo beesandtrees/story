@@ -1,27 +1,75 @@
 import Link from "next/link";
-import CONSTANTS from "../data/constants";
-import Layout from "./components/layouts/main";
-import Header from "./components/layouts/header";
+import { useState } from "react";
+import MainLayout from "./components/layouts/main";
 
-export default () => (
-  <Layout title="Welcome">
-    <Header title={"Welcome"} />
-    <div>
-      <p>
-        It's late fall. The harvest was poor this year and you've been chosen to
-        leave your village and got to {CONSTANTS.destination} to sell a{" "}
-        {CONSTANTS.macguffin} of great value. The sale of this item will help
-        your village make it through the coming winter.
-      </p>
-      <p>
-        You've been given instructions to guard the {CONSTANTS.macguffin}{" "}
-        carefullly, never leave the path and make a good bargain when you get to{" "}
-        {CONSTANTS.destination}. There may be bandits on the road. You've been
-        warned to stay alert.
-      </p>
+const MainPage = () => {
+  const [swinging, setSwinging] = useState(false);
+  return (
+    <MainLayout title="Bad Decisions">
+      <h1>
+        <span>Bad</span>
+        <span className={`rock ${swinging ? "swinging-rock" : ""}`}>
+          Decisions
+        </span>
+      </h1>
       <Link href="/story">
-        <button>Begin</button>
+        <span className="superhover" onMouseEnter={() => setSwinging(true)}>
+          <span className="start">Start Making Decisions</span>
+        </span>
       </Link>
-    </div>
-  </Layout>
-);
+      <style jsx>
+        {`
+          h1 span {
+            color: #ffffff;
+            display: inline-block;
+            font-family: "Carrois Gothic SC", sans-serif;
+            font-size: 8rem;
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 2;
+          }
+
+          h1 .rock {
+            background-color: #f46751;
+            z-index: 1;
+          }
+
+          h1 .swinging-rock {
+            animation-duration: 3s;
+            animation-fill-mode: both;
+            animation-name: swing;
+          }
+
+          .superhover {
+            color: #ffffff;
+            cursor: pointer;
+            padding: 4rem;
+          }
+
+          .start {
+            background-color: #5162ff;
+            display: inline-block;
+            font-family: "Zen Maru Gothic", sans-serif;
+            padding: 1rem 2rem;
+            position: relative;
+            z-index: 4;
+          }
+
+          @keyframes swing {
+            20% {
+              transform: rotate(48deg) translate(12px, 170px);
+            }
+            60% {
+              transform: rotate(37deg) translate(0px, 140px);
+            }
+            100% {
+              transform: rotate(44deg) translate(16px, 160px);
+            }
+          }
+        `}
+      </style>
+    </MainLayout>
+  );
+};
+
+export default MainPage;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Layout from "./components/layouts/main";
+import StoryLayout from "./components/layouts/story-layout";
 import Content from "./components/story/content";
 import Items from "./components/items";
 import Item from "./components/item-details";
@@ -51,7 +51,7 @@ export default () => {
   };
 
   return (
-    <Layout title="Story">
+    <StoryLayout title="Story">
       <Content
         activeItem={activeItem}
         acquireItem={acquireItem}
@@ -67,6 +67,6 @@ export default () => {
         useItem={openModal}
       />
       <Item item={currentItem} open={detailsModal} closeModal={closeModal} />
-    </Layout>
+    </StoryLayout>
   );
 };

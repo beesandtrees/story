@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default ({ children, title }) => (
+const StoryLayout = ({ children, title }) => (
   <div className="main">
     <Head>
       <title>{title}</title>
@@ -21,12 +21,13 @@ export default ({ children, title }) => (
       {`
         .main {
           align-items: center;
-          background-color: #303547;
+          background-color: #ffffff;
           display: flex;
           flex-direction: column;
           height: 100vh;
           justify-content: center;
           margin: 0 auto;
+          max-width: 740px;
           position: relative;
           text-align: center;
         }
@@ -35,4 +36,4 @@ export default ({ children, title }) => (
   </div>
 );
 
-export default MainLayout;
+export default StoryLayout;
