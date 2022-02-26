@@ -1,7 +1,7 @@
 import Link from "next/link";
 import CONSTANTS from "../data/constants";
-import Layout from "../components/layouts/main";
-import Header from "../components/layouts/header";
+import Layout from "./components/layouts/main";
+import Header from "./components/layouts/header";
 
 export default () => (
   <Layout title="Welcome">

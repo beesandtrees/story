@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[23],{"5C+S":function(n,t,_){"use strict";_.r(t);t.default={macguffin:"MACGUFFIN",destination:"TOWN X"}},E6bV:function(n,t,_){(window.__NEXT_P=window.__NEXT_P||[]).push(["/data/constants",function(){return _("5C+S")}])}},[["E6bV",0]]]);

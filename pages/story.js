@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/layouts/main";
-import Content from "../components/story/content";
-import Items from "../components/items";
-import Item from "../components/item-details";
+import Layout from "./components/layouts/main";
+import Content from "./components/story/content";
+import Items from "./components/items";
+import Item from "./components/item-details";
 
 import SceneArray from "../data/story";
 import Inventory from "../data/items";
@@ -22,9 +22,9 @@ export default () => {
     }
   }, [currentInventory, setInventory]);
 
-  const acquireItem = id => {
+  const acquireItem = (id) => {
     const addItem = Inventory.get(id);
-    if (currentInventory.filter(x => x.id === id).length === 0) {
+    if (currentInventory.filter((x) => x.id === id).length === 0) {
       setInventory([...currentInventory, addItem]);
       setItem(id);
     }
@@ -34,7 +34,7 @@ export default () => {
     setOpen(false);
   };
 
-  const openModal = id => {
+  const openModal = (id) => {
     setItem(id);
     setOpen(true);
   };
@@ -44,7 +44,7 @@ export default () => {
       console.log(remove, add);
     } else {
       const addItem = Inventory.get(add);
-      const updatedInventory = currentInventory.filter(x => x.id !== remove);
+      const updatedInventory = currentInventory.filter((x) => x.id !== remove);
       setInventory([...updatedInventory, addItem]);
       setItem(add);
     }

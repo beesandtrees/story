@@ -1,0 +1,1 @@
+_N_E=(window.webpackJsonp_N_E=window.webpackJsonp_N_E||[]).push([[33],{NIKU:function(_,n,w){(window.__NEXT_P=window.__NEXT_P||[]).push(["/data/story",function(){return w("CNMh")}])}},[["NIKU",0,4]]]);
