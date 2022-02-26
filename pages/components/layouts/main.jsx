@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-export default ({ children, title }) => (
+const MainLayout = ({ children, title }) => (
   <div className="main">
     <Head>
       <title>{title}</title>
