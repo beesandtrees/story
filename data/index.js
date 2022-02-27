@@ -13,6 +13,10 @@ const SceneArray = {
         {
           id: 2,
           link_text: "Get dressed and go deliver the envelope."
+        },
+        {
+          id: 3,
+          link_text: "Throw the envelope away."
         }
       ]
     },
@@ -21,12 +25,12 @@ const SceneArray = {
       id: 1,
       links: [
         {
-          id: 3,
+          id: 4,
           link_text:
             "Take photos of everything inside, then seal it back up and go deliver it."
         },
         {
-          id: 4,
+          id: 5,
           link_text:
             "Stick it in the mail. It'll get there and you don't even have to go anywhere."
         }
@@ -34,16 +38,16 @@ const SceneArray = {
     },
     {
       content:
-        "Back on the beach you see some people walking toward you. It's the Sea Captain from 'The Simpsons' and Bob Marley. They call out a warm greeting as you hear the song begin to play again. You open your eyes in the real world and look at your phone.",
+        "You drive downtown and park in front of the office building. You don't have money for the meter.",
       id: 2,
       links: [
         {
           id: `2a`,
-          link_text: "Hit the snooze again"
+          link_text: "Run in to drop off the envelope anyway."
         },
         {
-          id: `3`,
-          link_text: "Turn off your alarm completely. You're awake now."
+          id: `2b`,
+          link_text: "Ask people walking by for change."
         }
       ]
     },
