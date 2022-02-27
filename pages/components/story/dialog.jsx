@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default ({ dialog, items, setScene }) => {
+const Dialog = ({ dialog, items, setScene }) => {
   let [script, setScript] = useState(null);
 
   useEffect(() => {
@@ -28,10 +28,10 @@ export default ({ dialog, items, setScene }) => {
               if (
                 (!reply.required && !reply.exclude) ||
                 (reply.required &&
-                  items.filter(i => `${i.id}` === `${reply.required}`)
+                  items.filter((i) => `${i.id}` === `${reply.required}`)
                     .length) ||
                 (reply.exclude &&
-                  items.filter(i => `${i.id}` !== `${reply.exclude}`).length)
+                  items.filter((i) => `${i.id}` !== `${reply.exclude}`).length)
               ) {
                 return (
                   <React.Fragment key={`${reply.id}-${i}`}>
@@ -100,3 +100,5 @@ export default ({ dialog, items, setScene }) => {
   }
   return "";
 };
+
+export default Dialog;

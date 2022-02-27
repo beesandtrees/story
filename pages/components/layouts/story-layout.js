@@ -1,5 +1,7 @@
 import Head from "next/head";
 
+import { colors } from "../../../styles/colors";
+
 const StoryLayout = ({ children, title }) => (
   <div className="main">
     <Head>
@@ -17,11 +19,14 @@ const StoryLayout = ({ children, title }) => (
       />
     </Head>
     {children}
+    <footer className="footer">
+      <a href="http://melissakate.com">about</a>
+    </footer>
     <style jsx>
       {`
         .main {
           align-items: center;
-          background-color: #ffffff;
+          background-color: ${colors.white};
           display: flex;
           flex-direction: column;
           height: 100vh;
@@ -29,7 +34,23 @@ const StoryLayout = ({ children, title }) => (
           margin: 0 auto;
           max-width: 740px;
           position: relative;
-          text-align: center;
+          text-align: left;
+        }
+
+        .footer {
+          bottom: 1rem;
+          left: 1rem;
+          position: fixed;
+        }
+
+        .footer a {
+          color: ${colors.almost_black};
+          font-size: 14px;
+          text-decoration: none;
+        }
+
+        .footer a:hover {
+          text-decoration: underline;
         }
       `}
     </style>

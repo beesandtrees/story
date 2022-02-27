@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Links from "./links";
 import Items from "../items";
 
-export default ({
+const Trade = ({
   activeItem,
   currentScene = {},
   items = [],
@@ -82,3 +82,5 @@ export default ({
     </div>
   );
 };
+
+export default Trade;

@@ -10,7 +10,7 @@ const checkItems = (items, subset) => {
   return false;
 };
 
-export default ({ currentScene = {}, items, setScene }) => {
+const WithItems = ({ currentScene = {}, items, setScene }) => {
   const [win, setWin] = useState(false);
 
   let itemsNeeded = currentScene ? currentScene.itemsNeeded : [];
@@ -40,3 +40,5 @@ export default ({ currentScene = {}, items, setScene }) => {
     </React.Fragment>
   );
 };
+
+export default WithItems;

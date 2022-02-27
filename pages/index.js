@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useState } from "react";
 import MainLayout from "./components/layouts/main";
 
+import { colors } from "../styles/colors";
+
 const MainPage = () => {
   const [swinging, setSwinging] = useState(false);
   return (
@@ -20,7 +22,7 @@ const MainPage = () => {
       <style jsx>
         {`
           h1 span {
-            color: #ffffff;
+            color: ${colors.white};
             display: inline-block;
             font-family: "Carrois Gothic SC", sans-serif;
             font-size: 8rem;
@@ -30,7 +32,7 @@ const MainPage = () => {
           }
 
           h1 .rock {
-            background-color: #f46751;
+            background-color: ${colors.red_orange};
             z-index: 1;
           }
 
@@ -41,13 +43,13 @@ const MainPage = () => {
           }
 
           .superhover {
-            color: #ffffff;
+            color: ${colors.white};
             cursor: pointer;
             padding: 4rem;
           }
 
           .start {
-            background-color: #5162ff;
+            background-color: ${colors.blue};
             display: inline-block;
             font-family: "Zen Maru Gothic", sans-serif;
             padding: 1rem 2rem;

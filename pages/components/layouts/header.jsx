@@ -1,4 +1,4 @@
-export default ({ title }) => (
+const Header = ({ title }) => (
   <header className="header">
     <h1>{title}</h1>
     <style jsx>{`
@@ -15,3 +15,5 @@ export default ({ title }) => (
     `}</style>
   </header>
 );
+
+export default Header;

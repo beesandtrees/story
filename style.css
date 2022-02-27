@@ -1,6 +1,6 @@
 :root {
-  --main-text: #373737;
-  --link-text: #575adc;
+  --main-text: #43404e;
+  --link-text: #5162ff;
 }
 
 body,
@@ -44,8 +44,4 @@ button {
   text-align: left;
   text-decoration: none;
   width: auto;
-}
-
-button:hover {
-  text-decoration: underline;
 }

@@ -11,10 +11,7 @@ import otherTravellers from "./scenes/other.travellers";
 const SceneArray = {
   scenes: [
     {
-      content: `You've been walking all morning along the path that leads away from your village. You have a few small items and a bundle of food to last 4 days. You also have the ${
-        CONSTANTS.macguffin
-      } to trade.`,
-      headline: "Begin",
+      content: `You've been walking all morning along the path that leads away from your village. You have a few small items and a bundle of food to last 4 days. You also have the ${CONSTANTS.macguffin} to trade.`,
       id: 0,
       links: [
         {
@@ -25,7 +22,6 @@ const SceneArray = {
     },
     {
       content: `Ahead you see a fork in the road, but the sign has fallen. It's impossible to tell which way leads to your destination.\nNear the path on the left you see a small hut. It looks run-down and deserted. If someone lives there they may know which direction to take. But what kind of person would live in such a spooky little shack?`,
-      headline: "Choose a Direction",
       id: 1,
       links: [
         {
@@ -48,7 +44,6 @@ const SceneArray = {
     },
     {
       content: "You flip a coin and it lands on heads. You...",
-      headline: "Flip a coin",
       id: 2,
       links: [
         {
@@ -71,11 +66,11 @@ const SceneArray = {
     ...mountainPass.scenes,
     ...otherTravellers.scenes
   ],
-  all: function() {
+  all: function () {
     return this.scenes;
   },
-  get: function(id) {
-    const isMatch = element => element.id.toString() === id.toString();
+  get: function (id) {
+    const isMatch = (element) => element.id.toString() === id.toString();
     return this.scenes.find(isMatch);
   }
 };

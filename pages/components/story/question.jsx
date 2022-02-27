@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default ({ currentScene, links, setScene }) => {
+const Question = ({ currentScene, links, setScene }) => {
   const [showLinks, setShowLinks] = useState(false);
   const [nextLink, setNextLink] = useState(0);
   const [finalText, setfinalText] = useState(null);
@@ -41,3 +41,5 @@ export default ({ currentScene, links, setScene }) => {
     </React.Fragment>
   );
 };
+
+export default Question;

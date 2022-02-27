@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export default ({ links, setScene }) => {
+const RandomLink = ({ links, setScene }) => {
   const [selectedScene, selectScene] = useState({
     scene: null,
     link_text: null
@@ -30,3 +30,5 @@ export default ({ links, setScene }) => {
     </React.Fragment>
   );
 };
+
+export default RandomLink;
