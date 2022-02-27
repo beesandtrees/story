@@ -3,26 +3,32 @@ import travel from "./new-scenes/travel";
 const SceneArray = {
   scenes: [
     {
-      content: `You're walking on the beach. You're completely alone. It's warm and pleasant. You hear a song drifting toward you on the breeze. A sea shanty of sorts? Reggae? But it sounds sort of electronic. What is this? Where is it coming from? Something is wrapped around your legs. Seaweed? What is going on?`,
+      content: `You wake up Saturday morning feeling groggy. There's an envelope on the bedside table next to you. It has an address on it along with a name. \nYou went to a party with your friend Sarah last night. You started talking to a man in a gray suit. The party was outdoors and not very well lit. He seemed strange and kept turning into the shadows so you couldn't see his face very well, but you kept talking to him hoping to catch a glimpse. \nAfter chatting for half an hour or so he handed you an envelope and told you he would give you $1,000 to deliver it to an office in a building downtown, but you must not look in the envelope or tell anyone who sent you. You laughed and said that seemed excessive - and honestly a little crazy, but then you started to feel woozy. Maybe you shouldn't have let him get the last round?\n Now it's morning and you wonder how you got home.`,
       id: 0,
       links: [
         {
           id: 1,
-          link_text: "Look down"
+          link_text: "Open the envelope immediately."
+        },
+        {
+          id: 2,
+          link_text: "Get dressed and go deliver the envelope."
         }
       ]
     },
     {
-      content: `You blink a few times. Your legs are wrapped in your sheets. You wonder not for the first time why you chose 'By The Seaside' as your alarm.`,
+      content: `"I am not delivering something if I don't know what's in it!"\nYou carefully unseal the envelope making sure you can seal it back so no one will know you opened it.\nInside are some sort of plans. They look like architectural plans. It doesn't seem like something that would need to be delivered in secret.`,
       id: 1,
       links: [
         {
-          id: `2`,
-          link_text: "Hit the snooze"
+          id: 3,
+          link_text:
+            "Take photos of everything inside, then seal it back up and go deliver it."
         },
         {
-          id: `3`,
-          link_text: "Turn off your alarm completely. You're awake now."
+          id: 4,
+          link_text:
+            "Stick it in the mail. It'll get there and you don't even have to go anywhere."
         }
       ]
     },

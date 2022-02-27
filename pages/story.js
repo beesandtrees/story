@@ -4,7 +4,7 @@ import Content from "./components/story/content";
 import Items from "./components/items";
 import Item from "./components/item-details";
 
-import SceneArray from "../data/story";
+import SceneArray from "../data";
 import Inventory from "../data/items";
 
 export default () => {
@@ -60,13 +60,13 @@ export default () => {
         setScene={setScene}
         useItem={tradeItem}
       />
-      <Items
+      {/* <Items
         activeItem={activeItem}
         items={currentInventory}
         theme="drawer"
         useItem={openModal}
       />
-      <Item item={currentItem} open={detailsModal} closeModal={closeModal} />
+      <Item item={currentItem} open={detailsModal} closeModal={closeModal} /> */}
     </StoryLayout>
   );
 };

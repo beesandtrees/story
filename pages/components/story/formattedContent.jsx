@@ -1,10 +1,8 @@
 const FormattedContent = ({ content }) => {
   return content
     ? content.split("\n").map((c, i) => (
-        <>
-          <p className={`${i === 0 ? "first" : "other"}`} key={i}>
-            {c}
-          </p>
+        <div key={i}>
+          <p className={`${i === 0 ? "first" : "other"}`}>{c}</p>
           <style jsx>{`
             p {
               display: block;
@@ -18,7 +16,7 @@ const FormattedContent = ({ content }) => {
               letter-spacing: 1px;
             }
           `}</style>
-        </>
+        </div>
       ))
     : "";
 };

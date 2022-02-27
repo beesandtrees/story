@@ -4,6 +4,7 @@ const Links = ({ links, setScene }) => (
   <ul className="story-links">
     {links ? (
       links.map((link, i) => {
+        console.log(links);
         const nextScene = link ? link.id : 0;
         const buttonText = link ? link.link_text : "Start Over";
         const borderColor = linkBorders[i];
